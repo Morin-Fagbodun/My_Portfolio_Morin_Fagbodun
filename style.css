@@ -421,7 +421,7 @@ article .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 2rem;
     margin: 1rem;
 }
 
