@@ -349,7 +349,7 @@ section {
 
 .article-container {
     display: flex;
-    text-align: left;
+    text-align: center; /*edit made here */
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
@@ -358,6 +358,7 @@ section {
 
 article {
     display: flex;
+    text-align: left;
     width: 10rem;
     justify-content: space-around;
     gap: 0.5rem;
