@@ -63,7 +63,7 @@
 
     article{
         font-size: 1rem;
-        /* justify-content: center; */
+        justify-content: left;
     }
 
     footer nav {

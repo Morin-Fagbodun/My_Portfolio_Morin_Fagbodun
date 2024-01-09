@@ -353,14 +353,14 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 article {
     display: flex;
     text-align: left;
     width: 10rem;
-    justify-content: space-around;
+    justify-content: left;
     gap: 0.5rem;
 }
 
