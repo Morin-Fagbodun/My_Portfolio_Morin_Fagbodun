@@ -3,9 +3,10 @@ import { Container, Row, Col, Button, Modal, ModalHeader, ModalBody } from 'reac
 
 const ResumeModal = ({ isOpen, toggle, resumeUrl }) => {
   // Build the full URL so the embed and download both work
-  const fullUrl = resumeUrl.startsWith('http')
-    ? resumeUrl
-    : `http://localhost:5000${resumeUrl}`;
+const apiBase = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const fullUrl = resumeUrl.startsWith('http')
+  ? resumeUrl
+  : `${apiBase}${resumeUrl}`;
 
   return (
     <Modal isOpen={isOpen} toggle={toggle} size="xl" centered>
