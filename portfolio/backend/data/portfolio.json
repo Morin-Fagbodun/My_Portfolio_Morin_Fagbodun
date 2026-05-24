@@ -1,0 +1,246 @@
+{
+  "profile": {
+    "name": "Morin Fagbodun",
+    "title": "Software Engineer ",
+    "subtitle": "Hi, I'm",
+    "bio": "Fourth-year Software Engineering student with internship experience building full-stack and back-end solutions using TypeScript, Node.js, Python, and AWS. Skilled in designing scalable systems, automating workflows, and integrating AI-driven capabilities including vector embeddings and CI/CD pipelines.",
+    "email": "morinfagbodun@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/morin-fagbodun-183220260",
+    "github": "https://github.com/Morin-Fagbodun",
+    "resumeUrl": "/assets/Fagbodun_resume_2026.pdf",
+    "profilePic": "/assets/profile_pic.png",
+    "aboutPic": "/assets/about-pic-pt2.JPG",
+    "education": "B.Sc. in Software Engineering | Minor in Legal Studies | Rochester Institute of Technology | May 2028",
+    "experienceYears": "Internship Experience | Full Stack & Backend | AI/Cloud"
+  },
+  "skills": {
+    "languages": [
+      {
+        "id": 1,
+        "name": "Python",
+        "level": "Proficient"
+      },
+      {
+        "id": 2,
+        "name": "TypeScript",
+        "level": "Proficient"
+      },
+      {
+        "id": 3,
+        "name": "JavaScript",
+        "level": "Proficient"
+      },
+      {
+        "id": 4,
+        "name": "Java",
+        "level": "Intermediate"
+      },
+      {
+        "id": 5,
+        "name": "C/C++",
+        "level": "Intermediate"
+      },
+      {
+        "id": 6,
+        "name": "SQL",
+        "level": "Intermediate"
+      },
+      {
+        "id": 7,
+        "name": "Vue",
+        "level": "Beginner"
+      },
+      {
+        "id": 8,
+        "name": "Angular",
+        "level": "Intermediate"
+      }
+    ],
+    "frontend": [
+      {
+        "id": 9,
+        "name": "React",
+        "level": "Proficient"
+      },
+      {
+        "id": 10,
+        "name": "HTML/CSS",
+        "level": "Proficient"
+      },
+      {
+        "id": 11,
+        "name": "Spring Boot",
+        "level": "Intermediate"
+      },
+      {
+        "id": 12,
+        "name": "Node.js",
+        "level": "Proficient"
+      }
+    ],
+    "cloud": [
+      {
+        "id": 13,
+        "name": "AWS (EC2, S3, Lambda, SQS, SNS)",
+        "level": "Intermediate"
+      },
+      {
+        "id": 14,
+        "name": "MongoDB",
+        "level": "Proficient"
+      },
+      {
+        "id": 15,
+        "name": "PostgreSQL",
+        "level": "Intermediate"
+      },
+      {
+        "id": 16,
+        "name": "Docker",
+        "level": "Intermediate"
+      },
+      {
+        "id": 17,
+        "name": "CI/CD",
+        "level": "Intermediate"
+      },
+      {
+        "id": 18,
+        "name": "Datadog",
+        "level": "Intermediate"
+      }
+    ],
+    "ai": [
+      {
+        "id": 19,
+        "name": "LLMs / OpenAI",
+        "level": "Intermediate"
+      },
+      {
+        "id": 20,
+        "name": "Vector Embeddings",
+        "level": "Intermediate"
+      },
+      {
+        "id": 21,
+        "name": "Machine Learning",
+        "level": "Beginner"
+      },
+      {
+        "id": 22,
+        "name": "MongoDB MCP",
+        "level": "Intermediate"
+      }
+    ]
+  },
+  "workExperience": [
+    {
+      "id": 1,
+      "company": "Liberty Mutual Insurance",
+      "role": "Tech Start Summer Intern",
+      "location": "Indianapolis, IN",
+      "period": "May 2025 – Aug 2026",
+      "bullets": [
+        "Built a Docker-based document migration microservice using Node.js, AWS, and MongoDB, improving business observability and large-scale data ingestion.",
+        "Automated JSON schema generation with TypeScript, Angular, and CI/CD pipelines by mapping collection attributes via metadata parsing, reducing generation time from 5 minutes to 1 second."
+      ],
+      "tags": [
+        "Node.js",
+        "TypeScript",
+        "AWS",
+        "MongoDB",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Liberty Mutual Insurance",
+      "role": "Tech Start Fall Intern",
+      "location": "Indianapolis, IN",
+      "period": "Aug 2025 – Jan 2026",
+      "bullets": [
+        "Engineered MongoDB databases to store migration metadata and implemented vector embeddings for vector search, reducing business inquiry response time by 5–7 days.",
+        "Integrated AI-enabled analytics using the MongoDB Model Context Protocol (MCP) to support natural-language queries and data analysis.",
+        "Implemented AWS SQS for asynchronous vector embedding and data transfer, ensuring high-throughput migration performance.",
+        "Created Datadog dashboards and integrated AWS SNS alarms to monitor critical application errors 10% faster.",
+        "Delivered biweekly production releases in an Agile team using CI/CD pipelines and Git best practices."
+      ],
+      "tags": [
+        "MongoDB",
+        "AWS SQS",
+        "Vector Embeddings",
+        "LLMs",
+        "Datadog",
+        "Agile"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "AWS Global University Program",
+      "role": "AWS Student Builder Campus Leader",
+      "location": "Rochester, NY",
+      "period": "Jan 2026 – Dec 2026",
+      "bullets": [
+        "Driving 500+ AWS Builder Center signups through peer outreach, events, and campus initiatives.",
+        "Creating 24+ pieces of technical and promotional content using AI/LLMs to increase AWS awareness.",
+        "Facilitated hands-on AWS demos and ML workshops introducing students to EC2, S3, and Lambda.",
+        "Hosted 4 campus tabling events and delivered 10+ classroom announcements to promote AWS programs."
+      ],
+      "tags": [
+        "AWS",
+        "Machine Learning",
+        "AI/LLMs",
+        "Community"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Content Planner",
+      "description": "Full-stack content scheduling platform with a React front end, Python Flask RESTful API, and PostgreSQL database supporting 5–10 active testers. Implemented automated posting workflows in Python, reducing manual effort by 35%, with full unit test coverage in a CI/CD pipeline.",
+      "image": "/assets/content-planner-cover.png",
+      "githubUrl": "https://github.com/Morin-Fagbodun/Content-Schedular-.git",
+      "liveUrl": "",
+      "tags": [
+        "React",
+        "Python",
+        "Flask",
+        "PostgreSQL",
+        "CI/CD"
+      ],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Donation Website",
+      "description": "Web-based food bank management system enabling users to view and donate to posted needs. Built a role-based admin interface using Angular and Java Spring Boot to securely manage 20+ inventory items. Led Agile development as Scrum Master, coordinating sprint planning and REST API enhancements in Jira.",
+      "image": "/assets/new-project-loading.png",
+      "githubUrl": "",
+      "liveUrl": "",
+      "tags": [
+        "Angular",
+        "Java",
+        "Spring Boot",
+        "REST API",
+        "Agile"
+      ],
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Idiot's Delight Solitaire",
+      "description": "A back-end implementation of the classic Idiot's Delight card game built in Python. Features full game logic, card shuffling, and win condition detection.",
+      "image": "/assets/idiots_delight.png",
+      "githubUrl": "https://github.com/Morin-Fagbodun/Back-end-Solitaire_game.git",
+      "liveUrl": "",
+      "tags": [
+        "Python",
+        "Backend",
+        "Game Logic"
+      ],
+      "featured": true
+    }
+  ]
+}
