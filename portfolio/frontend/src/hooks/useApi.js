@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 
-const BASE = `${process.env.REACT_APP_API_URL || ''}/api`;
+
+const BASE_URL = process.env.REACT_APP_API_URL || 'https://my-portfolio-morin-fagbodun.onrender.com';
+const BASE = `${BASE_URL}/api`;
 
 export const useApi = () => {
   const { token } = useAuth();
