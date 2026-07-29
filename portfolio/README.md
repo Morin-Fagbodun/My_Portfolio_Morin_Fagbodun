@@ -161,4 +161,5 @@ The backend stores data in `portfolio.json` right now, which is perfect for a pe
 ## Deploying
 
 - **Backend** → Deploy to Railway, Render, or Heroku. Set `JWT_SECRET` and `CLIENT_URL` as environment variables.
-- **Frontend** → Run `npm run build --prefix frontend` and deploy the `build/` folder to Netlify/Vercel. Set `REACT_APP_API_URL` if your backend is on a different domain and update the `proxy` in `frontend/package.json`.
+- **Frontend** → Run `npm run build --prefix frontend` and deploy the `build/` folder to Netlify/Vercel. Set `REACT_APP_API_URL` if your backend is on a different domain and update the `proxy` in `frontend/package.json`
+.
