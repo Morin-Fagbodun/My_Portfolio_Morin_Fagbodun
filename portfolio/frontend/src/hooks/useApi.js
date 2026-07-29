@@ -15,7 +15,7 @@ export const useApi = () => {
   return {
     // ── Public ───────────────────────────────────────────────────────────────
     getPortfolio: () => axios.get(`${BASE}/portfolio`),
-    getProjects:  () => axios.get(`${BASE}/portfolio/projects`),
+    getProjects:  () => axios.get(`${BASE}/projects`),
 
     // ── Auth ─────────────────────────────────────────────────────────────────
     login: (username, password) =>
