@@ -113,7 +113,7 @@ npm run dev
 
 ## Admin Panel
 
-Navigate to `http://localhost:3000/admin/login`. This page is **not linked** anywhere on the public site.
+Navigate to `. This page is **not linked** anywhere on the public site.
 
 **Login:** username `admin`, password `password` (change it!)
 
