@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import {FaLinkedin, FaGithub,FaRegEnvelopeOpen} from 'react-icons/fa';
+import {FaLinkedin, FaGithub,FaEnvelope} from 'react-icons/fa';
 const ResumeModal = ({ isOpen, toggle, resumeUrl }) => {
   // Build the full URL so the embed and download both work
 const apiBase = process.env.REACT_APP_API_URL || 'https://my-portfolio-morin-fagbodun.onrender.com';
@@ -72,6 +72,7 @@ const Hero = ({ profile = {} }) => {
     profilePic = '',
     linkedin = '',
     github = '',
+    email = '',
   } = profile;
 
   return (
@@ -134,7 +135,7 @@ const Hero = ({ profile = {} }) => {
               )}
               {email && (
                 <a href={`mailto:${email}`} aria-label="Email">
-                  <FaRegEnvelopeOpen size={30} style={{ color: 'var(--color-primary)' }} />
+                  <FaEnvelope size={30} style={{ color: 'var(--color-primary)' }} />
                 </a>
               )}
             </div>
