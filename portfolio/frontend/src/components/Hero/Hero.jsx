@@ -132,11 +132,6 @@ const Hero = ({ profile = {} }) => {
                   <FaGithub size={30} style={{ color: 'var(--color-primary)' }} />
                 </a>
               )}
-              {email && (
-                <a href={`mailto:${email}`} aria-label="Email">
-                  <FaEnvelope size={30} style={{ color: 'var(--color-primary)' }} />
-                </a>
-              )}
             </div>
           </Col>
         </Row>
