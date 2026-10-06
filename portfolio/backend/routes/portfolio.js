@@ -40,7 +40,17 @@ router.get('/', (req, res) => {
   res.json(data);
 });
 
-router.get('/profile', (req, res) => res.json(readData().profile));
+router.get('/profile', (req, res) =>  {
+  const data = readData();
+  if (data.profile && data.profile.image) {
+    data.profile.image = formatImageUrl(data.profile.image);
+  }
+  res.json(data.profile);
+});
+
+
+
+
 router.get('/skills', (req, res) => res.json(readData().skills));
 router.get('/projects', (req, res) => {
   const data = readData();
