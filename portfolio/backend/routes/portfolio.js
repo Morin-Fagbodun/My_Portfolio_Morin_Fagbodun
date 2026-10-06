@@ -32,7 +32,7 @@ const getFormattedProfile = (data) => {
   if (!data.profile) return {};
   const formattedProfile = { ...data.profile };
   
-  const imageFields = ['image', 'avatar', 'profilePic', 'profilePicture', 'resume'];
+  const imageFields = ['image', 'icon', 'about', 'profilePicture', 'resume'];
   
   imageFields.forEach(field => {
     if (formattedProfile[field]) {
