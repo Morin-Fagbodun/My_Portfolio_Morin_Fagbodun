@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 1000;
 
 // ─── Middleware ────────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://morinfagbodunportfolio.netlify.app/',
+  origin: process.env.CLIENT_URL || 'https://morinfagbodunportfolio.netlify.app',
   credentials: true,
 }));
 app.use(express.json());
@@ -26,5 +26,5 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 // ─── Start ────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`✅ Backend running at https://my-portfolio-morin-fagbodun.onrender.com:${PORT}`);
+  console.log(`✅ Backend running at https://my-portfolio-morin-fagbodun.onrender.com`);
 });
