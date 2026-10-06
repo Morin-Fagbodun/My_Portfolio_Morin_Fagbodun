@@ -45,6 +45,9 @@ router.get('/profile', (req, res) =>  {
   if (data.profile && data.profile.image) {
     data.profile.image = formatImageUrl(data.profile.image);
   }
+  if (data.profile && data.profile.resume) {
+    data.profile.resume = formatImageUrl(data.profile.resume);
+  }
   res.json(data.profile);
 });
 
