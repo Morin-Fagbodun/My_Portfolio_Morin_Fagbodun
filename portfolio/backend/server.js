@@ -26,5 +26,5 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 // ─── Start ────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
-  console.log(`✅ Backend running at http://localhost:${PORT}`);
+  console.log(`✅ Backend running at https://my-portfolio-morin-fagbodun.onrender.com:${PORT}`);
 });

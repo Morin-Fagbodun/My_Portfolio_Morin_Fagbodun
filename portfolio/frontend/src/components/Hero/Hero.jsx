@@ -3,7 +3,7 @@ import { Container, Row, Col, Button, Modal, ModalHeader, ModalBody } from 'reac
 
 const ResumeModal = ({ isOpen, toggle, resumeUrl }) => {
   // Build the full URL so the embed and download both work
-const apiBase = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const apiBase = process.env.REACT_APP_API_URL || 'https://my-portfolio-morin-fagbodun.onrender.com';
 const fullUrl = resumeUrl.startsWith('http')
   ? resumeUrl
   : `${apiBase}${resumeUrl}`;
