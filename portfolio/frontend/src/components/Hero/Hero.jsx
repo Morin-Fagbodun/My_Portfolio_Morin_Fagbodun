@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
-
+import {FaLinkedin, FaGithub,FaRegEnvelopeOpen} from 'react-icons/fa';
 const ResumeModal = ({ isOpen, toggle, resumeUrl }) => {
   // Build the full URL so the embed and download both work
 const apiBase = process.env.REACT_APP_API_URL || 'https://my-portfolio-morin-fagbodun.onrender.com';
@@ -124,12 +124,17 @@ const Hero = ({ profile = {} }) => {
             <div className="d-flex gap-3">
               {linkedin && (
                 <a href={linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                  <img src="/assets/linkedin.png" alt="LinkedIn" className="social-icon" />
+                  <FaLinkedin size={30} style={{ color: 'var(--color-primary)' }} />
                 </a>
               )}
               {github && (
                 <a href={github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <img src="/assets/github.png" alt="GitHub" className="social-icon" />
+                  <FaGithub size={30} style={{ color: 'var(--color-primary)' }} />
+                </a>
+              )}
+              {email && (
+                <a href={`mailto:${email}`} aria-label="Email">
+                  <FaRegEnvelopeOpen size={30} style={{ color: 'var(--color-primary)' }} />
                 </a>
               )}
             </div>
