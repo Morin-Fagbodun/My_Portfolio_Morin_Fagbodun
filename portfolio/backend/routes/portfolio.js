@@ -13,7 +13,6 @@ const writeData = (data) => fs.writeFileSync(DATA_FILE, JSON.stringify(data, nul
 
 // ─── PUBLIC ROUTES ────────────────────────────────────────────────────────────
 
-
 const formatImageUrl = (url) => {
   if (!url) return '';
   if (url.startsWith('http')) return url;
@@ -21,54 +20,53 @@ const formatImageUrl = (url) => {
   return `${BACKEND_URL}${cleanUrl}`;
 };
 
+const getFormattedProjects = (data) => {
+  if (!data.projects || !Array.isArray(data.projects)) return [];
+  return data.projects.map(project => ({
+    ...project,
+    image: formatImageUrl(project.image),
+  }));
+};
 
-
-
-
+const getFormattedProfile = (data) => {
+  if (!data.profile) return {};
+  const formattedProfile = { ...data.profile };
+  
+  const imageFields = ['image', 'avatar', 'profilePic', 'profilePicture', 'resume'];
+  
+  imageFields.forEach(field => {
+    if (formattedProfile[field]) {
+      formattedProfile[field] = formatImageUrl(formattedProfile[field]);
+    }
+  });
+  
+  return formattedProfile;
+};
 
 router.get('/', (req, res) => {
   const data = readData();
-  if (data.profile && data.profile.image) {
-    data.profile.image = formatImageUrl(data.profile.image);
-  }
-  if (data.projects) {
-    data.projects = data.projects.map(project => ({
-      ...project,
-      image: formatImageUrl(project.image),
-    }));
-  }
-  res.json(data);
+  data.projects = getFormattedProjects(data);
+  data.profile = getFormattedProfile(data);
+  res.json(data); 
 });
 
-router.get('/profile', (req, res) =>  {
+router.get('/profile', (req, res) => {
   const data = readData();
-  if (data.profile && data.profile.image) {
-    data.profile.image = formatImageUrl(data.profile.image);
-  }
-  if (data.profile && data.profile.resume) {
-    data.profile.resume = formatImageUrl(data.profile.resume);
-  }
-  res.json(data.profile);
+  res.json(getFormattedProfile(data));
 });
 
+router.get('/skills', (req, res) => {
+  res.json(readData().skills);
+});
 
-
-
-router.get('/skills', (req, res) => res.json(readData().skills));
 router.get('/projects', (req, res) => {
   const data = readData();
-  const formatProjectImageUrl = (project) => ({
-    ...project,
-    image: formatImageUrl(project.image),
-  });
-  if (data.projects) {
-    data.projects = data.projects.map(formatProjectImageUrl);
-  }
-  res.json(data.projects);
+  res.json(getFormattedProjects(data));
 });
 
-
-router.get('/work', (req, res) => res.json(readData().workExperience || []));
+router.get('/work', (req, res) => {
+  res.json(readData().workExperience || []);
+});
 
 // ─── ADMIN PROTECTED ROUTES ───────────────────────────────────────────────────
 
