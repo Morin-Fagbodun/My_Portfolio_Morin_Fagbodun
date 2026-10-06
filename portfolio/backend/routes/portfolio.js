@@ -13,11 +13,35 @@ const writeData = (data) => fs.writeFileSync(DATA_FILE, JSON.stringify(data, nul
 
 // ─── PUBLIC ROUTES ────────────────────────────────────────────────────────────
 
-router.get('/', (req, res) => res.json(readData()));
-router.get('/profile', (req, res) => res.json(readData().profile));
+
+const formatImageUrl = (url) => {
+  if (!url) return '';
+  if (url.startsWith('http')) return url;
+  return `${BACKEND_URL}${url}`;
+};
+
+
+
+
+
+router.get('/', (req, res) => {
+  const data = readData();
+  data.urls = data.urls.map(formatImageUrl);
+  res.json(data);
+});
+router.get('/profile', (req, res) => {
+  const profile = readData().profile;
+  res.json({ ...profile, image: formatImageUrl(profile.image) });
+});
 router.get('/skills', (req, res) => res.json(readData().skills));
-router.get('/projects', (req, res) => res.json(readData().projects));
-router.get('/work', (req, res) => res.json(readData().workExperience || []));
+router.get('/projects', (req, res) => {
+  const projects = readData().projects;
+  res.json(projects.map(p => ({ ...p, image: formatImageUrl(p.image) })));
+});
+router.get('/work', (req, res) => {
+  const workExperience = readData().workExperience || [];
+  res.json(workExperience);
+});
 
 // ─── ADMIN PROTECTED ROUTES ───────────────────────────────────────────────────
 
