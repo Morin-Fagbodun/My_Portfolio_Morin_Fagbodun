@@ -30,7 +30,7 @@ const PortfolioPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('/api/portfolio')
+    axios.get('https://my-portfolio-morin-fagbodun.onrender.com/api/portfolio')
       .then(res => setData(res.data))
       .catch(() => setData(FALLBACK))
       .finally(() => setLoading(false));
