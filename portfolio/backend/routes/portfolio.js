@@ -5,6 +5,8 @@ const path = require('path');
 const authMiddleware = require('../middleware/auth');
 
 const DATA_FILE = path.join(__dirname, '../data/portfolio.json');
+const BACKEND_URL = 'https://my-portfolio-morin-fagbodun.onrender.com';
+
 
 const readData = () => JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
 const writeData = (data) => fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
@@ -75,7 +77,9 @@ router.post('/projects', authMiddleware, (req, res) => {
     id: Date.now(),
     title: req.body.title || 'Untitled Project',
     description: req.body.description || '',
-    image: req.body.image || '/assets/new-project-loading.png',
+    image: req.body.image
+      ? (req.body.image.startsWith('http') ? req.body.image : `${BACKEND_URL}${req.body.image}`)
+      : '',
     githubUrl: req.body.githubUrl || '',
     liveUrl: req.body.liveUrl || '',
     tags: req.body.tags || [],
