@@ -32,7 +32,7 @@ const getFormattedProfile = (data) => {
   if (!data.profile) return {};
   const formattedProfile = { ...data.profile };
   
-  const imageFields = ['image', 'icon', 'about', 'profilePicture', 'resume'];
+  const imageFields = ['resumeUrl', 'profilePic', 'aboutPic'];
   
   imageFields.forEach(field => {
     if (formattedProfile[field]) {
@@ -67,6 +67,7 @@ router.get('/projects', (req, res) => {
 router.get('/work', (req, res) => {
   res.json(readData().workExperience || []);
 });
+
 
 // ─── ADMIN PROTECTED ROUTES ───────────────────────────────────────────────────
 
