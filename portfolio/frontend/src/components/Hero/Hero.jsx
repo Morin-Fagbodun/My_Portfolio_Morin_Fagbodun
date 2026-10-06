@@ -72,7 +72,6 @@ const Hero = ({ profile = {} }) => {
     profilePic = '',
     linkedin = '',
     github = '',
-    email = '',
   } = profile;
 
   return (
